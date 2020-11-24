@@ -36,13 +36,26 @@ public class TicTacToeGame {
 	// Display the current position of board
 	public void displayBoard() {
 		
-		int charInd=1;
-		for(int i=0;i<3;i++) {
-			for(int j=0;j<3;j++) {
-				System.out.print("___"+"  "+board[charInd]);
-				charInd++;
-			}
-			System.out.println(" ");
+		System.out.println("\n"+board[1]+" | "+board[2]+" | "+board[3]);
+		System.out.println("___________");
+		System.out.println("\n"+board[4]+" | "+board[5]+" | "+board[6]);
+		System.out.println("___________");
+		System.out.println("\n"+board[7]+" | "+board[8]+" | "+board[9]);
+	}
+	
+	// User can make a move to a desired position
+	public void fillBoard() {
+		while(true) {
+		    System.out.println("Enter the position where you want to insert: ");
+		    int pos=sc.nextInt();
+		    sc.nextLine();
+		    if(board[pos]!=' ') {
+		    	System.out.println("Space not available! Select another position");
+		    }
+		    else {
+		    	board[pos]=playerChoice;
+		    	break;
+		    }
 		}
 	}
 	
@@ -54,6 +67,7 @@ public class TicTacToeGame {
 		obj.makeChoice();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
+		obj.fillBoard();
 		obj.displayBoard();
 	}
 
