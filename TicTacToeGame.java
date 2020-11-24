@@ -1,5 +1,6 @@
 package com.bl.tictactoe;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 public class TicTacToeGame {
 	
 	Scanner sc=new Scanner(System.in);
@@ -58,17 +59,29 @@ public class TicTacToeGame {
 		    }
 		}
 	}
+	public void toss() {
+		int tossRes=ThreadLocalRandom.current().nextInt(0,2);
+		System.out.println("Toss Res: "+tossRes);
+		if(tossRes==0) {
+			playerChoice='O';
+			computerChoice='X';
+			System.out.println("Computer Plays First");
+		}
+		else
+			playerChoice='X';
+		    computerChoice='O';
+		    System.out.println("Player Plays First");
+	}
+
 	
 	public static void main(String[] args) {
 		
 		System.out.println("******** Welcome to TicTacToeGame **********");
 		TicTacToeGame obj=new TicTacToeGame();
 		obj.createBoard();
-		obj.makeChoice();
+		obj.toss();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
-		obj.fillBoard();
-		obj.displayBoard();
 	}
 
 }
