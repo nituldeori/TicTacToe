@@ -67,13 +67,14 @@ public class TicTacToeGame {
 			computerChoice='X';
 			System.out.println("Computer Plays First");
 		}
-		else
+		else {
 			playerChoice='X';
 		    computerChoice='O';
 		    System.out.println("Player Plays First");
+		}
 	}
 
-	public void checkStatus() {
+	public int checkStatus() {
 		if((board[1]==computerChoice && board[2]==computerChoice && board[3]==computerChoice)||
 				(board[4]==computerChoice && board[5]==computerChoice && board[6]==computerChoice)||
 				(board[7]==computerChoice && board[8]==computerChoice && board[9]==computerChoice)||
@@ -83,6 +84,7 @@ public class TicTacToeGame {
 				(board[1]==computerChoice && board[5]==computerChoice && board[9]==computerChoice)||
 				(board[3]==computerChoice && board[5]==computerChoice && board[7]==computerChoice)) {
 			System.out.println("Sorry Computer Won");
+			return -1;
 		}
 		else if((board[1]==playerChoice && board[2]==playerChoice && board[3]==playerChoice)||
 				(board[4]==playerChoice && board[5]==playerChoice && board[6]==playerChoice)||
@@ -93,15 +95,93 @@ public class TicTacToeGame {
 				(board[1]==playerChoice && board[5]==playerChoice && board[9]==playerChoice)||
 				(board[3]==playerChoice && board[5]==playerChoice && board[7]==playerChoice)) {
 			System.out.println("Player Won!!!");
+			return 2;
 		}
 		else {
 			if(board[1]!=' ' && board[2]!=' ' && board[3]!=' ' && board[4]!=' ' && board[5]!=' ' && board[6]!=' ' && board[7]!=' ' && board[8]!=' ' && board[9]!=' ') {
 				System.out.println("Game is drawn!");
+				return 1;
 			}
 			System.out.println("Change turn!");
+			return 0;
 		}
     }
-
+	
+	public void computerPlay() {
+		if(board[1]==computerChoice && board[2]==computerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[2]==computerChoice && board[3]==computerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[1]==computerChoice && board[3]==computerChoice) {
+			board[2]=computerChoice;
+		}
+		else if(board[4]==computerChoice && board[5]==computerChoice) {
+			board[6]=computerChoice;
+		}
+		else if(board[5]==computerChoice && board[6]==computerChoice) {
+			board[4]=computerChoice;
+		}
+		else if(board[4]==computerChoice && board[6]==computerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[7]==computerChoice && board[8]==computerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[8]==computerChoice && board[9]==computerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[7]==computerChoice && board[9]==computerChoice) {
+			board[8]=computerChoice;
+		}
+		else if(board[1]==computerChoice && board[4]==computerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[1]==computerChoice && board[7]==computerChoice) {
+			board[4]=computerChoice;
+		}
+		else if(board[7]==computerChoice && board[4]==computerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[2]==computerChoice && board[5]==computerChoice) {
+			board[8]=computerChoice;
+		}
+		else if(board[5]==computerChoice && board[8]==computerChoice) {
+			board[2]=computerChoice;
+		}
+		else if(board[2]==computerChoice && board[8]==computerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[3]==computerChoice && board[6]==computerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[6]==computerChoice && board[9]==computerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[3]==computerChoice && board[9]==computerChoice) {
+			board[6]=computerChoice;
+		}
+		else if(board[1]==computerChoice && board[5]==computerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[5]==computerChoice && board[9]==computerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[1]==computerChoice && board[9]==computerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[3]==computerChoice && board[5]==computerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[5]==computerChoice && board[7]==computerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[3]==computerChoice && board[7]==computerChoice) {
+			board[5]=computerChoice;
+		}
+	}
+	
 				
 	public static void main(String[] args) {
 		
@@ -111,12 +191,13 @@ public class TicTacToeGame {
 		obj.toss();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
-		obj.board[1]='X';
-		obj.board[5]='X';
-		obj.board[9]='X';
+		obj.board[3]=obj.computerChoice;
+		obj.board[7]=obj.computerChoice;
+		obj.computerPlay();
 		obj.displayBoard();
-		obj.checkStatus();
+	
+	
 		
 	}
-
 }
+
