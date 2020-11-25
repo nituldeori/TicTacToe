@@ -258,40 +258,41 @@ public class TicTacToeGame {
 		}
 		
 		else if((board[1]==' ')||(board[3]==' ')||(board[7]==' ')||(board[9]==' ')) {
-			int rand1=ThreadLocalRandom.current().nextInt(1,5);
-			if(rand1==1 && board[1]==' ') {
+			if(board[1]==' ') {
 				board[1]=computerChoice;
 			}
-			else if(rand1==2 && board[3]==' ') {
+			else if(board[3]==' ') {
 				board[3]=computerChoice;
 			}
-			else if(rand1==3 && board[7]==' ') {
+			else if(board[7]==' ') {
 				board[7]=computerChoice;
 			}
-			else if(rand1==4 && board[9]==' ') {
+			else if(board[9]==' ') {
 				board[9]=computerChoice;
 			}
+			
 		}
 		else if(board[5]==' ') {
 			board[5]=computerChoice;
 		}
 		
 		else if((board[2]==' ')||(board[4]==' ')||(board[6]==' ')||(board[8]==' ')) {
-			int rand2=ThreadLocalRandom.current().nextInt(2,6);
-			if(rand2==2 && board[2]==' ') {
+			if(board[2]==' ') {
 				board[2]=computerChoice;
 			}
-			else if(rand2==3 && board[4]==' ') {
+			else if(board[4]==' ') {
 				board[4]=computerChoice;
 			}
-			else if(rand2==4 && board[6]==' ') {
+			else if(board[6]==' ') {
 				board[6]=computerChoice;
 			}
-			else if(rand2==5 && board[8]==' ') {
+			else if(board[8]==' ') {
 				board[8]=computerChoice;
 			}
 		}
 	}
+	
+	
 	
 				
 	public static void main(String[] args) {
@@ -302,13 +303,36 @@ public class TicTacToeGame {
 		obj.toss();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
-		obj.board[1]=obj.playerChoice;
-		obj.board[3]=obj.playerChoice;
-		obj.board[7]=obj.playerChoice;
-		obj.board[9]=obj.playerChoice;
-		obj.board[2]=obj.computerChoice;
-		obj.computerPlay();
-		obj.displayBoard();
+		int prev=0;
+		int res=0;
+		if(obj.playerChoice=='X') {
+			obj.fillBoard();
+			obj.displayBoard();
+			prev=1;
+		}
+		else {
+			obj.computerPlay();
+			obj.displayBoard();
+			prev=0;
+		}
+		while(true) {
+			if(prev==1) {
+				obj.computerPlay();
+				obj.displayBoard();
+				prev=0;
+				
+			}
+			else {
+				obj.fillBoard();
+				obj.displayBoard();
+				prev=1;
+			}
+			res=obj.checkStatus();
+			if(res==-1 || res==2 || res==1) {
+				break;
+			}
+			
+		}
 	
 	
 		
