@@ -347,8 +347,9 @@ public class TicTacToeGame {
 		}
 		
 	
-	
+		sc.close();
 		
 	}
+	
 }
 
