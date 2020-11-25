@@ -180,6 +180,80 @@ public class TicTacToeGame {
 		else if(board[3]==computerChoice && board[7]==computerChoice) {
 			board[5]=computerChoice;
 		}
+		
+		
+		else if(board[1]==playerChoice && board[2]==playerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[2]==playerChoice && board[3]==playerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[1]==playerChoice && board[3]==playerChoice) {
+			board[2]=computerChoice;
+		}
+		else if(board[4]==playerChoice && board[5]==playerChoice) {
+			board[6]=computerChoice;
+		}
+		else if(board[5]==playerChoice && board[6]==playerChoice) {
+			board[4]=computerChoice;
+		}
+		else if(board[4]==playerChoice && board[6]==playerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[7]==playerChoice && board[8]==playerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[8]==playerChoice && board[9]==playerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[7]==playerChoice && board[9]==playerChoice) {
+			board[8]=computerChoice;
+		}
+		else if(board[1]==playerChoice && board[4]==playerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[1]==playerChoice && board[7]==playerChoice) {
+			board[4]=computerChoice;
+		}
+		else if(board[7]==playerChoice && board[4]==playerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[2]==playerChoice && board[5]==playerChoice) {
+			board[8]=computerChoice;
+		}
+		else if(board[5]==playerChoice && board[8]==playerChoice) {
+			board[2]=computerChoice;
+		}
+		else if(board[2]==playerChoice && board[8]==playerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[3]==playerChoice && board[6]==playerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[6]==playerChoice && board[9]==playerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[3]==playerChoice && board[9]==playerChoice) {
+			board[6]=computerChoice;
+		}
+		else if(board[1]==playerChoice && board[5]==playerChoice) {
+			board[9]=computerChoice;
+		}
+		else if(board[5]==playerChoice && board[9]==playerChoice) {
+			board[1]=computerChoice;
+		}
+		else if(board[1]==playerChoice && board[9]==playerChoice) {
+			board[5]=computerChoice;
+		}
+		else if(board[3]==playerChoice && board[5]==playerChoice) {
+			board[7]=computerChoice;
+		}
+		else if(board[5]==playerChoice && board[7]==playerChoice) {
+			board[3]=computerChoice;
+		}
+		else if(board[3]==playerChoice && board[7]==playerChoice) {
+			board[5]=computerChoice;
+		}
 	}
 	
 				
@@ -191,8 +265,8 @@ public class TicTacToeGame {
 		obj.toss();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
-		obj.board[3]=obj.computerChoice;
-		obj.board[7]=obj.computerChoice;
+		obj.board[5]=obj.playerChoice;
+		obj.board[2]=obj.playerChoice;
 		obj.computerPlay();
 		obj.displayBoard();
 	
