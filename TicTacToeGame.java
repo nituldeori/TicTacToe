@@ -42,6 +42,8 @@ public class TicTacToeGame {
 		System.out.println("\n"+board[4]+" | "+board[5]+" | "+board[6]);
 		System.out.println("___________");
 		System.out.println("\n"+board[7]+" | "+board[8]+" | "+board[9]);
+		System.out.println(" ");
+		System.out.println(" ");
 	}
 	
 	// User can make a move to a desired position
@@ -108,166 +110,185 @@ public class TicTacToeGame {
     }
 	
 	public void computerPlay() {
-		if(board[1]==computerChoice && board[2]==computerChoice) {
+		if(board[1]==computerChoice && board[2]==computerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[2]==computerChoice && board[3]==computerChoice) {
+		else if(board[2]==computerChoice && board[3]==computerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[1]==computerChoice && board[3]==computerChoice) {
+		else if(board[1]==computerChoice && board[3]==computerChoice && board[2]==' ') {
 			board[2]=computerChoice;
 		}
-		else if(board[4]==computerChoice && board[5]==computerChoice) {
+		else if(board[4]==computerChoice && board[5]==computerChoice && board[6]==' ') {
 			board[6]=computerChoice;
 		}
-		else if(board[5]==computerChoice && board[6]==computerChoice) {
+		else if(board[5]==computerChoice && board[6]==computerChoice && board[4]==' ') {
 			board[4]=computerChoice;
 		}
-		else if(board[4]==computerChoice && board[6]==computerChoice) {
+		else if(board[4]==computerChoice && board[6]==computerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[7]==computerChoice && board[8]==computerChoice) {
+		else if(board[7]==computerChoice && board[8]==computerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[8]==computerChoice && board[9]==computerChoice) {
+		else if(board[8]==computerChoice && board[9]==computerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[7]==computerChoice && board[9]==computerChoice) {
+		else if(board[7]==computerChoice && board[9]==computerChoice && board[8]==' ') {
 			board[8]=computerChoice;
 		}
-		else if(board[1]==computerChoice && board[4]==computerChoice) {
+		else if(board[1]==computerChoice && board[4]==computerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[1]==computerChoice && board[7]==computerChoice) {
+		else if(board[1]==computerChoice && board[7]==computerChoice && board[4]==' ') {
 			board[4]=computerChoice;
 		}
-		else if(board[7]==computerChoice && board[4]==computerChoice) {
+		else if(board[7]==computerChoice && board[4]==computerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[2]==computerChoice && board[5]==computerChoice) {
+		else if(board[2]==computerChoice && board[5]==computerChoice && board[8]==' ') {
 			board[8]=computerChoice;
 		}
-		else if(board[5]==computerChoice && board[8]==computerChoice) {
+		else if(board[5]==computerChoice && board[8]==computerChoice && board[2]==' ') {
 			board[2]=computerChoice;
 		}
-		else if(board[2]==computerChoice && board[8]==computerChoice) {
+		else if(board[2]==computerChoice && board[8]==computerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[3]==computerChoice && board[6]==computerChoice) {
+		else if(board[3]==computerChoice && board[6]==computerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[6]==computerChoice && board[9]==computerChoice) {
+		else if(board[6]==computerChoice && board[9]==computerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[3]==computerChoice && board[9]==computerChoice) {
+		else if(board[3]==computerChoice && board[9]==computerChoice && board[6]==' ') {
 			board[6]=computerChoice;
 		}
-		else if(board[1]==computerChoice && board[5]==computerChoice) {
+		else if(board[1]==computerChoice && board[5]==computerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[5]==computerChoice && board[9]==computerChoice) {
+		else if(board[5]==computerChoice && board[9]==computerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[1]==computerChoice && board[9]==computerChoice) {
+		else if(board[1]==computerChoice && board[9]==computerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[3]==computerChoice && board[5]==computerChoice) {
+		else if(board[3]==computerChoice && board[5]==computerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[5]==computerChoice && board[7]==computerChoice) {
+		else if(board[5]==computerChoice && board[7]==computerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[3]==computerChoice && board[7]==computerChoice) {
+		else if(board[3]==computerChoice && board[7]==computerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
 		
 		
-		else if(board[1]==playerChoice && board[2]==playerChoice) {
+		else if(board[1]==playerChoice && board[2]==playerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[2]==playerChoice && board[3]==playerChoice) {
+		else if(board[2]==playerChoice && board[3]==playerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[1]==playerChoice && board[3]==playerChoice) {
+		else if(board[1]==playerChoice && board[3]==playerChoice && board[2]==' ') {
 			board[2]=computerChoice;
 		}
-		else if(board[4]==playerChoice && board[5]==playerChoice) {
+		else if(board[4]==playerChoice && board[5]==playerChoice && board[6]==' ') {
 			board[6]=computerChoice;
 		}
-		else if(board[5]==playerChoice && board[6]==playerChoice) {
+		else if(board[5]==playerChoice && board[6]==playerChoice && board[4]==' ') {
 			board[4]=computerChoice;
 		}
-		else if(board[4]==playerChoice && board[6]==playerChoice) {
+		else if(board[4]==playerChoice && board[6]==playerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[7]==playerChoice && board[8]==playerChoice) {
+		else if(board[7]==playerChoice && board[8]==playerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[8]==playerChoice && board[9]==playerChoice) {
+		else if(board[8]==playerChoice && board[9]==playerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[7]==playerChoice && board[9]==playerChoice) {
+		else if(board[7]==playerChoice && board[9]==playerChoice && board[8]==' ') {
 			board[8]=computerChoice;
 		}
-		else if(board[1]==playerChoice && board[4]==playerChoice) {
+		else if(board[1]==playerChoice && board[4]==playerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[1]==playerChoice && board[7]==playerChoice) {
+		else if(board[1]==playerChoice && board[7]==playerChoice && board[4]==' ') {
 			board[4]=computerChoice;
 		}
-		else if(board[7]==playerChoice && board[4]==playerChoice) {
+		else if(board[7]==playerChoice && board[4]==playerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[2]==playerChoice && board[5]==playerChoice) {
+		else if(board[2]==playerChoice && board[5]==playerChoice && board[8]==' ') {
 			board[8]=computerChoice;
 		}
-		else if(board[5]==playerChoice && board[8]==playerChoice) {
+		else if(board[5]==playerChoice && board[8]==playerChoice && board[2]==' ') {
 			board[2]=computerChoice;
 		}
-		else if(board[2]==playerChoice && board[8]==playerChoice) {
+		else if(board[2]==playerChoice && board[8]==playerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[3]==playerChoice && board[6]==playerChoice) {
+		else if(board[3]==playerChoice && board[6]==playerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[6]==playerChoice && board[9]==playerChoice) {
+		else if(board[6]==playerChoice && board[9]==playerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[3]==playerChoice && board[9]==playerChoice) {
+		else if(board[3]==playerChoice && board[9]==playerChoice && board[6]==' ') {
 			board[6]=computerChoice;
 		}
-		else if(board[1]==playerChoice && board[5]==playerChoice) {
+		else if(board[1]==playerChoice && board[5]==playerChoice && board[9]==' ') {
 			board[9]=computerChoice;
 		}
-		else if(board[5]==playerChoice && board[9]==playerChoice) {
+		else if(board[5]==playerChoice && board[9]==playerChoice && board[1]==' ') {
 			board[1]=computerChoice;
 		}
-		else if(board[1]==playerChoice && board[9]==playerChoice) {
+		else if(board[1]==playerChoice && board[9]==playerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
-		else if(board[3]==playerChoice && board[5]==playerChoice) {
+		else if(board[3]==playerChoice && board[5]==playerChoice && board[7]==' ') {
 			board[7]=computerChoice;
 		}
-		else if(board[5]==playerChoice && board[7]==playerChoice) {
+		else if(board[5]==playerChoice && board[7]==playerChoice && board[3]==' ') {
 			board[3]=computerChoice;
 		}
-		else if(board[3]==playerChoice && board[7]==playerChoice) {
+		else if(board[3]==playerChoice && board[7]==playerChoice && board[5]==' ') {
 			board[5]=computerChoice;
 		}
 		
 		else if((board[1]==' ')||(board[3]==' ')||(board[7]==' ')||(board[9]==' ')) {
 			int rand1=ThreadLocalRandom.current().nextInt(1,5);
-			if(rand1==1) {
+			if(rand1==1 && board[1]==' ') {
 				board[1]=computerChoice;
 			}
-			else if(rand1==2) {
+			else if(rand1==2 && board[3]==' ') {
 				board[3]=computerChoice;
 			}
-			else if(rand1==3) {
+			else if(rand1==3 && board[7]==' ') {
 				board[7]=computerChoice;
 			}
-			else if(rand1==4) {
+			else if(rand1==4 && board[9]==' ') {
 				board[9]=computerChoice;
+			}
+		}
+		else if(board[5]==' ') {
+			board[5]=computerChoice;
+		}
+		
+		else if((board[2]==' ')||(board[4]==' ')||(board[6]==' ')||(board[8]==' ')) {
+			int rand2=ThreadLocalRandom.current().nextInt(2,6);
+			if(rand2==2 && board[2]==' ') {
+				board[2]=computerChoice;
+			}
+			else if(rand2==3 && board[4]==' ') {
+				board[4]=computerChoice;
+			}
+			else if(rand2==4 && board[6]==' ') {
+				board[6]=computerChoice;
+			}
+			else if(rand2==5 && board[8]==' ') {
+				board[8]=computerChoice;
 			}
 		}
 	}
@@ -281,7 +302,11 @@ public class TicTacToeGame {
 		obj.toss();
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
-		obj.board[5]=obj.playerChoice;
+		obj.board[1]=obj.playerChoice;
+		obj.board[3]=obj.playerChoice;
+		obj.board[7]=obj.playerChoice;
+		obj.board[9]=obj.playerChoice;
+		obj.board[2]=obj.computerChoice;
 		obj.computerPlay();
 		obj.displayBoard();
 	
