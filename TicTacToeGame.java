@@ -254,6 +254,22 @@ public class TicTacToeGame {
 		else if(board[3]==playerChoice && board[7]==playerChoice) {
 			board[5]=computerChoice;
 		}
+		
+		else if((board[1]==' ')||(board[3]==' ')||(board[7]==' ')||(board[9]==' ')) {
+			int rand1=ThreadLocalRandom.current().nextInt(1,5);
+			if(rand1==1) {
+				board[1]=computerChoice;
+			}
+			else if(rand1==2) {
+				board[3]=computerChoice;
+			}
+			else if(rand1==3) {
+				board[7]=computerChoice;
+			}
+			else if(rand1==4) {
+				board[9]=computerChoice;
+			}
+		}
 	}
 	
 				
@@ -266,7 +282,6 @@ public class TicTacToeGame {
 		System.out.println("Player choice: "+obj.playerChoice);
 		System.out.println("Computer choice: "+obj.computerChoice);
 		obj.board[5]=obj.playerChoice;
-		obj.board[2]=obj.playerChoice;
 		obj.computerPlay();
 		obj.displayBoard();
 	
